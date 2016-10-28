@@ -27,12 +27,9 @@ Just call them using the right keys (check the main menu).
 The main tutorial can be found here:<br>
 https://gbatemp.net/threads/tutorial-how-to-decrypt-extract-rebuild-3ds-roms.383055/
 
-Contact me in french:
-- On Pokémon Trash : http://www.pokemontrash.com/club/profile/?u=53612
-- Email : shanon.mathet@gmail.com
-
-Contact me in english:
-- On GBA Temp : https://gbatemp.net/members/asia81.356294/
+Contacts:
+- At Pokémon Trash (for french speakers) : http://www.pokemontrash.com/club/profile/?u=53612
+- At GBA Temp (for english speakers) : https://gbatemp.net/members/asia81.356294/
 - Email : shanon.mathet@gmail.com
 
 Personnal website:<br>
