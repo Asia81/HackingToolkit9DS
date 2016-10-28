@@ -33,7 +33,7 @@ Contact me in english:
 - On GBA Temp : https://gbatemp.net/members/asia81.356294/
 - Email : shanon.mathet@gmail.com
 
-Personnal website <em<(crappy atm and big wip)</em>:<br>
+Personnal website:<br>
 http://asia81.webnode.fr/
 
 If you fork it, or do anything with it, do what you want without asking.  
