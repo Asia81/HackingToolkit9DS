@@ -11,10 +11,11 @@ With this tool, you'll be able to:<br>
 - Extract any ncch partition from a .3DS decrypted file (soon CIA support too)
 - Extract datas from a decrypted ncch binary file
 
-Before report an issue, be sure your .3DS/CIA/CXI files:
-- Are fully decrypted
-- Doesn't have any space or special caracters in their names (such as é or à).
-- Don't write the extension when asking for extract your game. Want extract "Game.cia"? Just write "Game".
+Before report an issue, be sure:
+- Your .3DS/CIA/CXI files are fully decrypted
+- Your .3DS/CIA/CXI files doesn't have any space or special caracter in their names (such as é or à)
+- To don't write the extension when asking for extract your game. Want extract "Game.cia"? Just write "Game".
+- To have installed the Setup package for your langage.
 
 Are included some shortcuts of:
 - 3DS Builder
