@@ -9,14 +9,15 @@ With this tool, you'll be able to:
 - Extract any ncch partition from a .3DS decrypted file (Soon CIA support too)
 - Extract datas from a decrypted ncch binary file
 
+
 Are included some shortcuts of:
 - 3DS Builder
 - Pokemon Patch Pointer Tool
 - RomFS Builder
 - RomFS Extractor
 
-Like that you don't have to take them in any folder or search for them.
-Just call them using the right keys (check the main menu).
+<p>Like that you don't have to take them in any folder or search for them.</p>
+<p>Just call them using the right keys (check the main menu).</p>
 
 The main tutorial can be found here:  
 https://gbatemp.net/threads/tutorial-how-to-decrypt-extract-rebuild-3ds-roms.383055/
