@@ -7,31 +7,31 @@ cls
 echo.
 echo    ##################################################
 echo    #                                                #
-echo    #            PackHack v5.4 by Asia81             #
-echo    #              Updated: 09/26/2016               #
+echo    #            PackHack v5.5 par Asia81            #
+echo    #            Mis … jour le 28/10/2016            #
 echo    #               asia81.webnode.fr                #
 echo    #                                                #
 echo    ##################################################
 echo.
 echo.
-echo - Enter D for extract a .3DS file
-echo - Enter R for rebuild a .3DS file
-echo - Enter CE for extract a .CIA file
-echo - Enter CR for rebuild a .CIA file
-echo - Enter ME for use a Mass Extractor
-echo - Enter MR for use a Mass Rebuilder
-echo - Enter CXI fo extract a .CXI file
-echo - Enter B for extract/rebuild a decrypted banner
-echo - Enter FS1 for extract a ncch partition
-echo - Enter FS2 for extract data from a decrypted partition
-echo - Enter 3DSB for open 3DS Builder
-echo - Enter PPPT for open Pokemon Patch Pointer Tool
-echo - Enter RFSB for open RomFS Builder
-echo - Enter RFSE for open RomFS Extractor
+echo - Entrez D pour extraire un fichier .3DS
+echo - Entrez R pour reconstruire un fichier .3DS
+echo - Entrez CE pour extraire un fichier .CIA
+echo - Entrez CR pour reconstruire un fichier .CIA
+echo - Entrez ME pour utiliser un extracteur de masse
+echo - Entrez MR pour utiliser un reconstructeur de masse
+echo - Entrez CXI pour extraire un fichier .CXI
+echo - Entrez B pour extraire/recompiler une banniŠre
+echo - Entrez FS1 pour extraire seulemement une partition ncch
+echo - Entrez FS2 pour extraire les donn‚es d'une partition ncch
+echo - Entrez 3DSB pour ouvrir 3DS Builder
+echo - Entrez PPPT pour ouvrir Pok‚mon Patch Pointer Tool
+echo - Entrez RFSB pour ouvrir RomFS Builder
+echo - Entrez RFSE pour ouvrir RomFS Extractor
 echo.
-echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo.
-set /p Menu=Enter your choice: 
+set /p Menu=Entrez votre s‚lection : 
 if /i "%Menu%"=="D" GOTO Extract3DS
 if /i "%Menu%"=="R" GOTO Rebuild3DS
 if /i "%Menu%"=="CE" GOTO ExtractCIA
@@ -52,13 +52,13 @@ if /i "%Menu%"=="EFS" GOTO ExtractExeFS
 :Extract3DS
 cls
 echo.
-set /p Rom3DS="Enter the name of your decrypted .3DS file (Without extension): "
+set /p Rom3DS="Entrez le nom de votre fichier .3DS d‚crypt‚ (Sans extension) : "
 echo.
-set /p DecompressCode="Decompress the code.bin file (n/y)? : "
-if /i "%DecompressCode%"=="Y" (SET ScriptCode=xutf) ELSE (SET ScriptCode=xtf)
+set /p DecompressCode="D‚compresser le fichier code.bin (n/o) ? : "
+if /i "%DecompressCode%"=="O" (SET ScriptCode=xutf) ELSE (SET ScriptCode=xtf)
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 echo.
 "3dstool.exe" -xtf 3ds %Rom3DS%.3ds --header HeaderNCCH.bin -0 DecryptedPartition0.bin -1 DecryptedPartition1.bin -2 DecryptedPartition2.bin -6 DecryptedPartition6.bin -7 DecryptedPartition7.bin >NUL 2>NUL
 "3dstool.exe" -xtf cxi DecryptedPartition0.bin --header HeaderNCCH0.bin --exh DecryptedExHeader.bin --exefs DecryptedExeFS.bin --romfs DecryptedRomFS.bin --logo LogoLZ.bin --plain PlainRGN.bin >NUL 2>NUL
@@ -83,7 +83,7 @@ copy ExtractedExeFS\banner.bin banner.bin >NUL 2>NUL
 "3dstool.exe" -x -t banner -f banner.bin --banner-dir ExtractedBanner\ >NUL 2>NUL
 ren ExtractedBanner\banner0.bcmdl banner.cgfx >NUL 2>NUL
 del banner.bin >NUL 2>NUL
-echo Extraction done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -91,10 +91,10 @@ goto:TitleMenu
 :Rebuild3DS
 cls
 echo.
-set /p OutputRom3DS="Enter the output filename for your custom .3DS file (Without extension): "
+set /p OutputRom3DS="Entrez le nom de sortie de votre fichier .3DS reconstruit (Sans extension) : "
 cls
 echo.
-echo Please wait, rebuild in progress...
+echo Veuillez patienter, reconstruction en cours...
 echo.
 "3dstool.exe" -ctf romfs CustomRomFS.bin --romfs-dir ExtractedRomFS >NUL 2>NUL
 ren ExtractedExeFS\banner.bin banner.bnr >NUL 2>NUL
@@ -113,7 +113,7 @@ ren ExtractedExeFS\icon.icn icon.bin >NUL 2>NUL
 "3dstool.exe" -ctf cfa CustomPartition7.bin --header HeaderNCCH7.bin --romfs CustomO3DSUpdate.bin >NUL 2>NUL
 for %%j in (Custom*.bin) do if %%~zj LEQ 20000 DEL %%j >NUL 2>NUL
 "3dstool.exe" -ctf 3ds %OutputRom3DS%_Edited.3ds --header HeaderNCCH.bin -0 CustomPartition0.bin -1 CustomPartition1.bin -2 CustomPartition2.bin -6 CustomPartition6.bin -7 CustomPartition7.bin >NUL 2>NUL
-echo Creation done!
+echo Cr‚ation termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -121,13 +121,13 @@ goto:TitleMenu
 :ExtractCIA
 cls
 echo.
-set /p RomCIA="Enter the name of your decrypted .CIA file (Without extension): "
+set /p RomCIA="Entrez le nom du fichier .CIA d‚crypt‚ (Sans extension) : "
 echo.
-set /p DecompressCode="Decompress the code.bin file (n/y)? : "
-if /i "%DecompressCode%"=="Y" (SET ScriptCode=xutf) ELSE (SET ScriptCode=xtf)
+set /p DecompressCode="D‚compresser le fichier code.bin (n/o) ? : "
+if /i "%DecompressCode%"=="O" (SET ScriptCode=xutf) ELSE (SET ScriptCode=xtf)
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 echo.
 "ctrtool.exe" --content=DecryptedApp %RomCIA%.cia >NUL 2>NUL
 ren DecryptedApp.0000.* DecryptedPartition0.bin >NUL 2>NUL
@@ -149,7 +149,7 @@ del banner.bin >NUL 2>NUL
 "3dstool.exe" -xtf romfs DecryptedRomFS.bin --romfs-dir ExtractedRomFS >NUL 2>NUL
 "3dstool.exe" -xtf romfs DecryptedManual.bin --romfs-dir ExtractedManual >NUL 2>NUL
 "3dstool.exe" -xtf romfs DecryptedDownloadPlay.bin --romfs-dir ExtractedDownloadPlay >NUL 2>NUL
-echo Extraction done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -157,10 +157,11 @@ goto:TitleMenu
 :RebuildCIA
 cls
 echo.
-set /p OutputRomCIA="Enter the output filename for your custom .CIA file (Without extension) : "
-cls
+set /p OutputRomCIA="Entrez le nom de sortie de votre fichier .CIA reconstruit (Sans extension) : "
+set /p MinorVer="Entrez la version minor pour le .CIA (Entrez 0 si vous ne savez pas) : "
+set /p MicroVer="Entrez la version micro pour le .CIA (Entrez 0 si vous ne savez pas) : "
 echo.
-echo Please wait, rebuild in progress...
+echo Veuillez patienter, reconstruction en cours...
 echo.
 "3dstool.exe" -ctf romfs CustomRomFS.bin --romfs-dir ExtractedRomFS >NUL 2>NUL
 ren ExtractedExeFS\banner.bin banner.bnr >NUL 2>NUL
@@ -177,8 +178,8 @@ for %%j in (Custom*.bin) do if %%~zj LEQ 20000 DEL %%j >NUL 2>NUL
 IF EXIST CustomPartition0.bin (SET ARG0=-content CustomPartition0.bin:0:0x00) >NUL 2>NUL
 IF EXIST CustomPartition1.bin (SET ARG1=-content CustomPartition1.bin:1:0x01) >NUL 2>NUL
 IF EXIST CustomPartition2.bin (SET ARG2=-content CustomPartition2.bin:2:0x02) >NUL 2>NUL
-"MakeRom.exe" -f cia %ARG0% %ARG1% %ARG2% -o %OutputRomCIA%_Edited.cia >NUL 2>NUL
-echo Creation done!
+"MakeRom.exe" -f cia %ARG0% %ARG1% %ARG2% -minor %MinorVer% -micro %MicroVer% -o %OutputRomCIA%_Edited.cia
+echo Cr‚ation termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -186,20 +187,20 @@ goto:TitleMenu
 :DecryptedCXI
 cls
 echo.
-set /p RomCXI="Enter the name of your decrypted .CXI file (Without extension): "
+set /p RomCXI="Entrez le nom de votre fichier .CXI d‚crypt‚ (Sans extension) : "
 echo.
-set /p DecompressCode="Decompress the code.bin file (n/y)? : "
-if /i "%DecompressCode%"=="Y" (SET DC=--decompresscode) ELSE (SET DC=)
+set /p DecompressCode="D‚compresser le fichier code.bin (n/o) ? : "
+if /i "%DecompressCode%"=="O" (SET DC=--decompresscode) ELSE (SET DC=)
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 echo.
 "ctrtool.exe" -p --ncch=0 --exheader=DecryptedExHeader.bin %RomCXI%.cxi >NUL 2>NUL
 "ctrtool.exe" -p --ncch=0 --exefs=DecryptedExeFS.bin %RomCXI%.cxi >NUL 2>NUL
 "ctrtool.exe" -p --ncch=0 --romfs=DecryptedRomFS.bin %RomCXI%.cxi >NUL 2>NUL
 "ctrtool.exe" -t romfs --romfsdir=./ExtractedRomFS DecryptedRomFS.bin >NUL 2>NUL
 "ctrtool.exe" -t exefs --exefsdir=./ExtractedExeFS DecryptedExeFS.bin %DC% >NUL 2>NUL
-echo Extraction done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -221,7 +222,7 @@ goto:TitleMenu
 :DecryptedBanner
 cls
 echo.
-set /p Partition="Extract (1) or Rebuild (2) your banner? : "
+set /p Partition="Extraire (1) ou reconstruire (2) la banniŠre ? : "
 if /i %Partition%==1 GOTO ExtractBanner
 if /i %Partition%==2 GOTO RebuildBanner
 
@@ -230,7 +231,7 @@ cls
 echo.
 "3dstool.exe" -x -t banner -f banner.bin --banner-dir ExtractedBanner\ >NUL 2>NUL
 ren ExtractedBanner\banner0.bcmdl banner.cgfx >NUL 2>NUL
-echo Banner extracted!
+echo BanniŠre extraite !
 echo.
 pause
 goto:TitleMenu
@@ -241,7 +242,7 @@ echo.
 ren ExtractedBanner\banner.cgfx banner0.bcmdl >NUL 2>NUL
 "3dstool.exe" -c -t banner -f banner.bin --banner-dir ExtractedBanner\ >NUL 2>NUL
 ren ExtractedBanner\banner0.bcmdl banner.cgfx >NUL 2>NUL
-echo Banner created!
+echo BanniŠre cr‚‚e !
 echo.
 pause
 goto:TitleMenu
@@ -255,7 +256,7 @@ echo   7 = DecryptedO3DSUpdate.bin
 echo.
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo.
-set /p NcchPartition="Enter your choice (1/2/3/4/5/6/7): "
+set /p NcchPartition="Entrez votre choix (1/2/3/4/5/6/7) : "
 if /i "%NcchPartition%"=="1" GOTO ExtractNCCH-ExHeader
 if /i "%NcchPartition%"=="2" GOTO ExtractNCCH-ExeFS
 if /i "%NcchPartition%"=="3" GOTO ExtractNCCH-RomFS
@@ -267,11 +268,11 @@ if /i "%NcchPartition%"=="7" GOTO ExtractNCCH-O3DSUpdate
 :ExtractNCCH-ExHeader
 cls
 echo.
-set /p FileName="Enter the name of your decrypted file (With extension): "
+set /p FileName=Entrez le nom du fichier App ou 3DS d‚crypt‚ (Extension comprise) : 
 cls
 "ctrtool.exe" -p --ncch=0 --exheader=DecryptedExHeader.bin %FileName% >NUL 2>NUL
 echo.
-echo Done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -279,93 +280,93 @@ goto:TitleMenu
 :ExtractNCCH-ExeFS
 cls
 echo.
-set /p FileName="Enter the name of your decrypted file (With extension): "echo Veuillez patienter, extraction en cours...
+set /p FileName="Entrez le nom du fichier d‚crypt‚ (Extension comprise) : "
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -p --ncch=0 --exefs=DecryptedExeFS.bin %FileName% >NUL 2>NUL
 echo.
-set /p Ask2Extract=Done! Would you extract it now (n/y)? 
-if /i %Ask2Extract%==y GOTO ExtractExeFS
+set /p Ask2Extract=Termin‚ ! Souhaitez-vous l'extraire (n/o) ? 
+if /i %Ask2Extract%==o GOTO ExtractExeFS
 if /i %Ask2Extract%==n GOTO TitleMenu
 
 :ExtractNCCH-RomFS
 cls
 echo.
-set /p FileName="Enter the name of your decrypted file (With extension): "
+set /p FileName="Entrez le nom du fichier d‚crypt‚ (Extension comprise) : "
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -p --ncch=0 --romfs=DecryptedRomFS.bin %FileName% >NUL 2>NUL
 echo.
-set /p Ask2Extract="Done! Would you extract it now (n/y)? "
-if /i %Ask2Extract%==y GOTO ExtractRomFS
+set /p Ask2Extract=Termin‚ ! Souhaitez-vous l'extraire (n/o) ? 
+if /i %Ask2Extract%==o GOTO ExtractRomFS
 if /i %Ask2Extract%==n GOTO TitleMenu
 
 :ExtractNCCH-Manual
 cls
 echo.
-set /p FileName="Enter the name of your decrypted file (With extension): "
+set /p FileName="Entrez le nom du fichier d‚crypt‚ (Extension comprise) : "
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -p --ncch=1 --romfs=DecryptedManual.bin %FileName% >NUL 2>NUL
 echo.
-set /p Ask2Extract=Done! Would you extract it now (n/y)? 
-if /i %Ask2Extract%==y GOTO ExtractManual
+set /p Ask2Extract=Termin‚ ! Souhaitez-vous l'extraire (n/o) ? 
+if /i %Ask2Extract%==o GOTO ExtractManual
 if /i %Ask2Extract%==n GOTO TitleMenu
 
 :ExtractNCCH-DownloadPlay
 cls
 echo.
-set /p FileName="Enter the name of your decrypted file (With extension): "
+set /p FileName="Entrez le nom du fichier d‚crypt‚ (Extension comprise) : "
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -p --ncch=2 --romfs=DecryptedDownloadPlay.bin %FileName% >NUL 2>NUL
 echo.
-set /p Ask2Extract=Done! Would you extract it now (n/y)? 
-if /i %Ask2Extract%==y GOTO ExtractDownloadPlay
+set /p Ask2Extract=Termin‚ ! Souhaitez-vous l'extraire (n/o) ? 
+if /i %Ask2Extract%==o GOTO ExtractDownloadPlay
 if /i %Ask2Extract%==n GOTO TitleMenu
 
 :ExtractNCCH-N3DSUpdate
 cls
 echo.
-set /p FileName="Enter the name of your decrypted file (With extension): "
+set /p FileName="Entrez le nom du fichier d‚crypt‚ (Extension comprise) : "
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -p --ncch=6 --romfs=DecryptedN3DSUpdate.bin %FileName% >NUL 2>NUL
 echo.
-set /p Ask2Extract=Done! Would you extract it now (n/y)? 
-if /i %Ask2Extract%==y GOTO ExtractN3DSUpdate
+set /p Ask2Extract=Termin‚ ! Souhaitez-vous l'extraire (n/o) ? 
+if /i %Ask2Extract%==o GOTO ExtractN3DSUpdate
 if /i %Ask2Extract%==n GOTO TitleMenu
 
 :ExtractNCCH-O3DSUpdate
 cls
 echo.
-set /p FileName="Enter the name of your decrypted file (With extension): "
+set /p FileName="Entrez le nom du fichier d‚crypt‚ (Extension comprise) : "
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -p --ncch=7 --romfs=DecryptedO3DSUpdate.bin %FileName% >NUL 2>NUL
 echo.
-set /p Ask2Extract=Done! Would you extract it now (n/y)? 
-if /i %Ask2Extract%==y GOTO ExtractO3DSUpdate
+set /p Ask2Extract=Termin‚ ! Souhaitez-vous l'extraire (n/o) ? 
+if /i %Ask2Extract%==o GOTO ExtractO3DSUpdate
 if /i %Ask2Extract%==n GOTO TitleMenu
 
 :ExtractNCCHDecrypted
 cls
 echo.
-echo                       Please name your files like this:
+echo                    Veuillez nommer vos fichiers comme ceci :
 echo          DecryptedExeFS.bin / DecryptedRomFS.bin / DecryptedManual.bin
 echo    DecryptedDownloadPlay.bin / DecryptedN3DSUpdate.bin / DecryptedO3DSUpdate.bin
 echo.
-echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo.
-echo Example: exefs / romfs / manual / dlplay / updaten3ds / updateo3ds
+echo Exemple : exefs / romfs / manual / dlplay / updaten3ds / updateo3ds
 echo.
-set /p Partition="Enter the partition to extract: "
+set /p Partition="Entrez le nom de la partition … extraire : "
 if /i %Partition%==exefs GOTO ExtractExeFS
 if /i %Partition%==romfs GOTO ExtractRomFS
 if /i %Partition%==manual GOTO ExtractManual
@@ -376,11 +377,11 @@ if /i %Partition%==updateo3ds GOTO ExtractO3DSUpdate
 :ExtractExeFS
 cls
 echo.
-set /p DecompressCode="Decompress the code.bin file (n/y) ?: "
+set /p DecompressCode="D‚compresser le fichier code.bin (n/o) ? : "
 cls
 echo.
-echo Please wait, extraction in progress...
-if /i "%DecompressCode%"=="Y" (SET DC=--decompresscode) ELSE (SET DC=)
+echo Veuillez patienter, extraction en cours...
+if /i "%DecompressCode%"=="O" (SET DC=--decompresscode) ELSE (SET DC=)
 "ctrtool.exe" -t exefs --exefsdir=./ExtractedExeFS DecryptedExeFS.bin %DC% >NUL 2>NUL
 del ExtractedExeFS\.bin >NUL 2>NUL
 copy ExtractedExeFS\banner.bin banner.bin >NUL 2>NUL
@@ -388,7 +389,7 @@ copy ExtractedExeFS\banner.bin banner.bin >NUL 2>NUL
 ren ExtractedBanner\banner0.bcmdl banner.cgfx >NUL 2>NUL
 del banner.bin >NUL 2>NUL
 echo.
-echo Done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -396,10 +397,10 @@ goto:TitleMenu
 :ExtractRomFS
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -t romfs --romfsdir=./ExtractedRomFS DecryptedRomFS.bin >NUL 2>NUL
 echo.
-echo Done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -407,10 +408,10 @@ goto:TitleMenu
 :ExtractManual
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -t romfs --romfsdir=./ExtractedManual DecryptedManual.bin >NUL 2>NUL
 echo.
-echo Done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -418,10 +419,10 @@ goto:TitleMenu
 :ExtractDownloadPlay
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -t romfs --romfsdir=./ExtractedDownloadPlay DecryptedDownloadPlay.bin >NUL 2>NUL
 echo.
-echo Done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -429,10 +430,10 @@ goto:TitleMenu
 :ExtractO3DSUpdate
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -t romfs --romfsdir=./ExtractedO3DSUpdate DecryptedO3DSUpdate.bin >NUL 2>NUL
 echo.
-echo Done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu
@@ -440,10 +441,10 @@ goto:TitleMenu
 :ExtractN3DSUpdate
 cls
 echo.
-echo Please wait, extraction in progress...
+echo Veuillez patienter, extraction en cours...
 "ctrtool.exe" -t romfs --romfsdir=./ExtractedN3DSUpdate DecryptedN3DSUpdate.bin >NUL 2>NUL
 echo.
-echo Done!
+echo Extraction termin‚e !
 echo.
 pause
 goto:TitleMenu

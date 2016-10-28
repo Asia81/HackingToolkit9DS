@@ -7,8 +7,8 @@ cls
 echo.
 echo    ##################################################
 echo    #                                                #
-echo    #            PackHack v5.4 by Asia81             #
-echo    #              Updated: 09/26/2016               #
+echo    #            PackHack v5.5 by Asia81             #
+echo    #              Updated: 10/28/2016               #
 echo    #               asia81.webnode.fr                #
 echo    #                                                #
 echo    ##################################################
@@ -158,6 +158,8 @@ goto:TitleMenu
 cls
 echo.
 set /p OutputRomCIA="Enter the output filename for your custom .CIA file (Without extension) : "
+set /p MinorVer="Enter the original minor version for the custom .CIA (Enter 0 if you don't know) : "
+set /p MicroVer="Enter the original micro version for the custom .CIA (Enter 0 if you don't know) : "
 cls
 echo.
 echo Please wait, rebuild in progress...
@@ -177,7 +179,7 @@ for %%j in (Custom*.bin) do if %%~zj LEQ 20000 DEL %%j >NUL 2>NUL
 IF EXIST CustomPartition0.bin (SET ARG0=-content CustomPartition0.bin:0:0x00) >NUL 2>NUL
 IF EXIST CustomPartition1.bin (SET ARG1=-content CustomPartition1.bin:1:0x01) >NUL 2>NUL
 IF EXIST CustomPartition2.bin (SET ARG2=-content CustomPartition2.bin:2:0x02) >NUL 2>NUL
-"%PROGRAMFILES%\HackingToolkit3DS\MakeRom.exe" -f cia %ARG0% %ARG1% %ARG2% -o %OutputRomCIA%_Edited.cia >NUL 2>NUL
+"%PROGRAMFILES%\HackingToolkit3DS\MakeRom.exe" -f cia %ARG0% %ARG1% %ARG2% -minor %MinorVer% -micro %MicroVer% -o %OutputRomCIA%_Edited.cia >NUL 2>NUL
 echo Creation done!
 echo.
 pause

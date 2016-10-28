@@ -1,5 +1,5 @@
 @echo off
-title CleanTool by Asia81 (09/26/2016)
+title CleanTool by Asia81
 color C
 cls
 echo.
