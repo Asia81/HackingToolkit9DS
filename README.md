@@ -11,8 +11,8 @@ With this tool, you'll be able to:<br>
 - Extract any ncch partition from a .3DS decrypted file (soon CIA support too)
 - Extract datas from a decrypted ncch binary file
 
-Before report an issue:
-- Be sure your .3DS, .CIA or CXI are fully decrypted
+Before report an issue, be sure your .3DS/CIA/CXI files:
+- Are fully decrypted
 - Doesn't have any space or special caracters in their names (such as é or à).
 
 Are included some shortcuts of:
@@ -22,7 +22,7 @@ Are included some shortcuts of:
 - RomFS Extractor
 
 Like that you don't have to take them in any folder or search for them.<br>
-Just call them using the right keys (check the main menu).
+Just call them using the right keys (check the main menu) and they will appear.
 
 The main tutorial can be found here:<br>
 https://gbatemp.net/threads/tutorial-how-to-decrypt-extract-rebuild-3ds-roms.383055/
