@@ -16,8 +16,8 @@ Are included some shortcuts of:
 - RomFS Builder
 - RomFS Extractor
 
-<p>Like that you don't have to take them in any folder or search for them.
-<p>Just call them using the right keys (check the main menu).</p>
+Like that you don't have to take them in any folder or search for them.<br>
+Just call them using the right keys (check the main menu).
 
 The main tutorial can be found here:  
 https://gbatemp.net/threads/tutorial-how-to-decrypt-extract-rebuild-3ds-roms.383055/
