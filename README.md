@@ -1,12 +1,14 @@
 # HackingToolkit3DS
 
+![IMAGE](http://image.noelshack.com/fichiers/2016/43/1477620050-ht3ds.png)
+
 With this tool, you'll be able to:<br>
 - Extract and Rebuild any .3DS file (previously decrypted using Decrypt9WIP and my tutorial)
 - Extract and Rebuild any .CIA file (previously decrypted using Decrypt9WIP and my tutorial) (No DLC atm)
 - Extract any .CXI file (previously dumped using Braindump and my tutorial)
-- Extract and Rebuild a 3DS banner filer (shown on the 3DS home menu)
+- Extract and Rebuild a 3DS banner file (shown on the 3DS home menu)
 - Mass Decrypt and Mass Rebuild any .3DS and .CIA files in the same time. Yes, sir.
-- Extract any ncch partition from a .3DS decrypted file (Soon CIA support too)
+- Extract any ncch partition from a .3DS decrypted file (soon CIA support too)
 - Extract datas from a decrypted ncch binary file
 
 Before report an issue:
@@ -15,7 +17,7 @@ Before report an issue:
 
 Are included some shortcuts of:
 - 3DS Builder
-- Pokemon Patch Pointer Tool
+- Pokemon Patch Pointer Tool (for patching code.bin file, related to custom updates)
 - RomFS Builder
 - RomFS Extractor
 
