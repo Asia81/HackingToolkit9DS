@@ -14,6 +14,7 @@ With this tool, you'll be able to:<br>
 Before report an issue, be sure your .3DS/CIA/CXI files:
 - Are fully decrypted
 - Doesn't have any space or special caracters in their names (such as é or à).
+- Don't write the extension when asking for extract your game. Want extract "Game.cia"? Just write "Game".
 
 Are included some shortcuts of:
 - 3DS Builder
