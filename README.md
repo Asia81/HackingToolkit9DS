@@ -1,6 +1,6 @@
 # HackingToolkit3DS
 
-![IMAGE](http://image.noelshack.com/fichiers/2016/43/1477620050-ht3ds.png)
+![IMAGE](http://image.noelshack.com/fichiers/2017/01/1483846029-hackingtoolkit3ds.png)
 
 With this tool, you'll be able to:<br>
 - Extract and Rebuild any .3DS file (previously decrypted using Decrypt9WIP and my tutorial)
@@ -40,4 +40,4 @@ http://asia81.webnode.fr/
 If you fork it, or do anything with it, do what you want without asking.  
 But please, just give some credits, thanks.
 
-As always #TeamOnodera
+#TeamOnodera and #TeamRem Until the Death
