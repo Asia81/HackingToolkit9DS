@@ -40,4 +40,4 @@ http://asia81.webnode.fr/
 If you fork it, or do anything with it, do what you want without asking.  
 But please, just give some credits, thanks.
 
-#TeamOnodera and #TeamRem Until the Death
+As Always #TeamOnodera and #TeamRem Until the Death
