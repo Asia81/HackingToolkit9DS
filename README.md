@@ -32,11 +32,11 @@ The main tutorial can be found here:<br>
 https://gbatemp.net/threads/tutorial-how-to-decrypt-extract-rebuild-3ds-cia-cxi-files.383055/
 
 Contacts:
-Github : https://github.com/Asia81
-Twitter : https://twitter.com/MATHETShanon
-Facebook : https://www.facebook.com/shanon.mathet
-Youtube : https://www.youtube.com/user/shanon290694/
-GBA Temp : https://gbatemp.net/members/asia81.356294/
+- Github : https://github.com/Asia81
+- Twitter : https://twitter.com/MATHETShanon
+- Facebook : https://www.facebook.com/shanon.mathet
+- Youtube : https://www.youtube.com/user/shanon290694/
+- GBA Temp : https://gbatemp.net/members/asia81.356294/
 (I speak both french and english, feel free to speak to me in the language you want)
 
 If you fork it, or do anything with it, do what you want without asking.  
