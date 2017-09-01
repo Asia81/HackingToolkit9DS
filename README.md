@@ -3,20 +3,20 @@
 ![IMAGE](http://nsa39.casimages.com/img/2017/09/01/170901023745881270.png)
 
 With this tool, you'll be able to:
-- Extract and Rebuild any .3DS file
-- Extract and Rebuild any .CIA file (No DLC nor DSiWare atm)
+- Extract and rebuild any .3DS file
+- Extract and rebuild any .CIA file (No DLC nor DSiWare atm)
 - Extract any .CXI file
-- Extract and Rebuild a 3DS banner file (shown on the 3DS home menu)
-- Mass Extract and Mass Rebuild any .3DS and .CIA files in the same time. Yes, sir!
+- Extract and rebuild a 3DS banner file (shown on the 3DS home menu)
+- Mass extract and mass rebuild any .3DS and .CIA files in the same time. Yes, sir!
 - Extract any ncch partition from a .3DS file (CIA support soon)
 - Extract contents from a decrypted ncch binary file
 
 Before report an issue, be sure:
-- Your 3DS/CIA/CXI file(s) doesn't have any space or special caracter in their names (such as é or à)
-- Your 3DS/CIA/CXI file(s) are in the same folder as HackingToolkit9DS
-- You're not trying to extract the rom in the ProgramFiles folder (where installed core files are).
-- To don't write the extension when asking for extract your game. Want extract "Game.cia"? Just write "Game".
-- To have installed the Setup package for your langage.
+- Your 3DS/CIA/CXI file doesn't have any space or special caracter in its name (such as é or à).
+- Your 3DS/CIA/CXI file is in the same folder as HackingToolkit9DS.
+- You're not trying to extract the file in the ProgramFiles folder (where installed core files are).
+- To write or don't write the extension of your file when specified.
+- To have installed the setup package for your langage (SetupXX.exe file).
 
 Changelog V10 (09/01/2017)
 - Added: Support for Boot9 extraction on PC. Absolutely no more decryption is required on 3DS.
