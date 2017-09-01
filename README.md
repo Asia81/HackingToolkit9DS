@@ -2,7 +2,7 @@
 
 ![IMAGE](http://nsa39.casimages.com/img/2017/09/01/170901023745881270.png)
 
-<- With this tool, you'll be able to: ->
+With this tool, you'll be able to:
 - Extract and Rebuild any .3DS file
 - Extract and Rebuild any .CIA file (No DLC nor DSiWare atm)
 - Extract any .CXI file
@@ -11,23 +11,23 @@
 - Extract any ncch partition from a .3DS decrypted file (CIA support soon)
 - Extract contents from a decrypted ncch binary file
 
-<- Before report an issue, be sure: ->
+Before report an issue, be sure:
 - Your 3DS/CIA/CXI file(s) doesn't have any space or special caracter in their names (such as é or à)
 - Your 3DS/CIA/CXI file(s) are in the same folder as HackingToolkit3DS
 - You're not trying to extract the rom the ProgramFiles folder (where installed core files are).
 - To don't write the extension when asking for extract your game. Want extract "Game.cia"? Just write "Game".
 - To have installed the Setup package for your langage.
 
-<- Changelog V10 (09/01/2017): ->
--Added: Support for Boot9 extraction on PC.
+Changelog V10 (09/01/2017):
+- Added: Support for Boot9 extraction on PC.
 Absolutely no more decryption is required on 3DS.
 Project is renamed HackingToolkit9DS for the occasion.
--Edited: Some strings, words and sentences.
--Removed: Temporarily removed the 32 bits support.
--Removed: Integrated 3DS Builder.
--Removed: Integrated Pokemon Patch Pointer Tool.
--Removed: Integrated RomFS Extractor.
--Removed: Integrated RomFS Builder.
+- Edited: Some strings, words and sentences.
+- Removed: Temporarily removed the 32 bits support.
+- Removed: Integrated 3DS Builder.
+- Removed: Integrated Pokemon Patch Pointer Tool.
+- Removed: Integrated RomFS Extractor.
+- Removed: Integrated RomFS Builder.
 
 The main tutorial can be found here:<br>
 https://gbatemp.net/threads/tutorial-how-to-decrypt-extract-rebuild-3ds-cia-cxi-files.383055/
