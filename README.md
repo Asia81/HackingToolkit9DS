@@ -7,22 +7,21 @@ With this tool, you'll be able to:
 - Extract and Rebuild any .CIA file (No DLC nor DSiWare atm)
 - Extract any .CXI file
 - Extract and Rebuild a 3DS banner file (shown on the 3DS home menu)
-- Mass Decrypt and Mass Rebuild any .3DS and .CIA files in the same time. Yes, sir!
-- Extract any ncch partition from a .3DS decrypted file (CIA support soon)
+- Mass Extract and Mass Rebuild any .3DS and .CIA files in the same time. Yes, sir!
+- Extract any ncch partition from a .3DS file (CIA support soon)
 - Extract contents from a decrypted ncch binary file
 
 Before report an issue, be sure:
 - Your 3DS/CIA/CXI file(s) doesn't have any space or special caracter in their names (such as é or à)
-- Your 3DS/CIA/CXI file(s) are in the same folder as HackingToolkit3DS
-- You're not trying to extract the rom the ProgramFiles folder (where installed core files are).
+- Your 3DS/CIA/CXI file(s) are in the same folder as HackingToolkit9DS
+- You're not trying to extract the rom in the ProgramFiles folder (where installed core files are).
 - To don't write the extension when asking for extract your game. Want extract "Game.cia"? Just write "Game".
 - To have installed the Setup package for your langage.
 
 Changelog V10 (09/01/2017)
-- Added: Support for Boot9 extraction on PC.
-- Info: Absolutely no more decryption is required on 3DS.
+- Added: Support for Boot9 extraction on PC. Absolutely no more decryption is required on 3DS.
 - Renamed: Project is renamed HackingToolkit9DS for the occasion.
-- Edited: Some strings, words and sentences.
+- Edited: Some strings, words and sentences has been changed.
 - Removed: Temporarily removed the 32 bits support.
 - Removed: Integrated 3DS Builder.
 - Removed: Integrated Pokemon Patch Pointer Tool.
