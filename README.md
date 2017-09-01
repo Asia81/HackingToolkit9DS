@@ -18,10 +18,10 @@ Before report an issue, be sure:
 - To don't write the extension when asking for extract your game. Want extract "Game.cia"? Just write "Game".
 - To have installed the Setup package for your langage.
 
-Changelog V10 (09/01/2017):
+Changelog V10 (09/01/2017)
 - Added: Support for Boot9 extraction on PC.
-Absolutely no more decryption is required on 3DS.
-Project is renamed HackingToolkit9DS for the occasion.
+- Info: Absolutely no more decryption is required on 3DS.
+- Renamed: Project is renamed HackingToolkit9DS for the occasion.
 - Edited: Some strings, words and sentences.
 - Removed: Temporarily removed the 32 bits support.
 - Removed: Integrated 3DS Builder.
