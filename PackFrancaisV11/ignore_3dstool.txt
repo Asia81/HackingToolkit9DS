@@ -1,4 +1,0 @@
-// regex: ECMAScript grammar and case insensitive
-//ignore:
-
-//remap ignore:
