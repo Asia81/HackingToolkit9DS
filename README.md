@@ -2,6 +2,10 @@
 
 ![IMAGE](http://nsa39.casimages.com/img/2018/02/20/180220062531406418.png)
 
+UDDATE AS OF JUNE 21st 2018
+You have understood from my inactivity that the tool is not being updated anymore.
+It still work (or not, depend on peoples), but I'm not working anymore on it.
+
 With this tool, you'll be able to:
 - Extract and rebuild any .3DS file
 - Extract and rebuild any .CIA file (No DLC nor DSiWare atm)
