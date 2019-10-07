@@ -32,9 +32,8 @@ https://gbatemp.net/threads/383055/
 
 Contacts:
 - Github : https://github.com/Asia81
-- Twitter : https://twitter.com/MATHETShanon
-- Facebook : https://www.facebook.com/shanon.mathet
-- Youtube : https://www.youtube.com/user/shanon290694/
+- Twitter : https://twitter.com/ProteccWaifu
+- Youtube : https://www.youtube.com/c/asia81
 - GBA Temp : https://gbatemp.net/members/asia81.356294/
 - I speak both french and english, feel free to speak to me in the language you want.
 
