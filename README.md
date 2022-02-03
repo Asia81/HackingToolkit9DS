@@ -23,6 +23,10 @@ Before report an issue, be sure:
 - To write or don't write the extension of your file when specified.
 - To have installed the setup package for your language (SetupXX.exe file).
 
+Changelog V13 (02/02/2022)
+- Add title version and major version for rebuilding CIA.
+- Update makerom.exe to v0.18.
+
 Changelog V12 (02/20/2018)
 - Fixed encrypted CIA rebuild process.
 - Removed installation check.

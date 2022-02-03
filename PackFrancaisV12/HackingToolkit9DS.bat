@@ -8,7 +8,7 @@ echo.
 echo    ##################################################
 echo    #                                                #
 echo    #         HackingToolkit9DS par Asia81           #
-echo    #        Mis … jour le 20/02/2018 (V12)          #
+echo    #        Mis … jour le 02/02/2022 (V13)          #
 echo    #                                                #
 echo    ##################################################
 echo.
@@ -154,6 +154,8 @@ goto:TitleMenu
 cls
 echo.
 set /p OutputRomCIA="Entrez le nom de sortie de votre fichier .CIA (sans extension) : "
+set /p TitleVer="Version title originelle (entrez 0 si vous ne savez pas) : "
+set /p MajorVer="Version major originelle (entrez 0 si vous ne savez pas) : "
 set /p MinorVer="Version minor originelle (entrez 0 si vous ne savez pas) : "
 set /p MicroVer="Version micro originelle (entrez 0 si vous ne savez pas) : "
 cls
@@ -181,7 +183,7 @@ for %%j in (Custom*.bin) do if %%~zj LEQ 20000 del %%j >NUL 2>NUL
 if exist CustomPartition0.bin (SET ARG0=-content CustomPartition0.bin:0:0x00) >NUL 2>NUL
 if exist CustomPartition1.bin (SET ARG1=-content CustomPartition1.bin:1:0x01) >NUL 2>NUL
 if exist CustomPartition2.bin (SET ARG2=-content CustomPartition2.bin:2:0x02) >NUL 2>NUL
-"makerom.exe" -target p -ignoresign -f cia %ARG0% %ARG1% %ARG2% -minor %MinorVer% -micro %MicroVer% -o %OutputRomCIA%_Edited.cia >NUL 2>NUL
+"makerom.exe" -target p -ignoresign -f cia %ARG0% %ARG1% %ARG2% -ver %TitleVer% -major %MajorVer% -minor %MinorVer% -micro %MicroVer% -o %OutputRomCIA%_Edited.cia >NUL 2>NUL
 echo Compilation termin‚e !
 echo.
 pause
